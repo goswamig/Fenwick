@@ -1,0 +1,13 @@
+A C++ implememtation of Fenwick tree which perform following two operations on a given array in O(logn) time
+
+1. Find some from 0 to any given index i
+   (This can be used to find sum between two interval)
+  eg: getSum(fenwickTree, i);
+   
+2. Update an entry of array.
+   array[i] += newVal;
+   updateFW(fenwick, i, newVal);
+   (This can be used to overwrite a value as well)
+    prevVal = arra[i];
+    array[i] = newVal;
+    updateFW(fenwick, i, newVal-prevVal);
